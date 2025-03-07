@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in JS</title>
+    <style>
+        body{
+        background-color: rgb(7, 7, 7);
+        color: rgb(125, 225, 225);
+    }
+
+    button{
+    background-color: rgb(238, 238, 135);
+    height: 25px;
+    width: 150px;
+    border-radius: 10px;
+    color: black;
+    font-size: 14px; 
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Window Object</h1>
+    <button id="btn1" onclick="window.open('https://thapatechnical.shop/cources','_blank')">Navigator</button>
+
+    <h1>History Object</h1>
+    <button class="btn2"onclick="history.back()">Go Back</button>
+
+    <button onclick="history.forward()">Go Forward</button>
+    <button onclick="history.go(-1)">Go F & B</button>
+
+    <h1>Location Object</h1>
+    <button onclick="location.reload()">Reload the Page</button>
+    <button onclick="location.replace('https://unsplash.com/' , '_blank')">Replace Page</button>
+    <button onclick="location.assign('https://unsplash.com/')">Replace with Assign</button>
+</body>
+
+<script>
+let parent1 = document.getElementById('btn1');
+console.log(parent1);
+
+let parent2 = document.getElementsByClassName('btn2');
+console.log(...parent2);
+
+const parent3 = document.querySelector('#btn1');
+console.log(parent3);
+console.log(parent3.innerHTML = "js cource");
+
+const parent4 = document.querySelectorAll("button");
+console.log(parent4);
+
+</script>
+
+</html>

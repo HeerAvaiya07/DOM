@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Todo App</title>
+</head>
+
+<body>
+<div>
+    <h1>DOM Todo App</h1>
+    <input type="text" id="inputField">
+    <button id="btn">click me</button>
+    <div class="todoListsElem">
+        <p id="todoFirst"></p>
+    </div>
+</div>
+</body>
+
+<script>
+    let inputElem = document.getElementById("inputField");
+    let clickBtn = document.getElementById("btn");
+    let todoFirst = document.getElementById("todoFirst");
+
+    const addToDo = () =>{
+        console.log(inputElem.value);
+        todoFirst.textContent = inputElem.value;
+    }
+
+    clickBtn.addEventListener("click",()=>{
+        addToDo();
+    })
+</script>
+
+</html>

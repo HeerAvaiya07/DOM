@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseEvent</title>
+    <style>
+    body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.rectangle{
+    margin-top: 100%;
+    width: 250px;
+    height: 250px;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    height: 35px;
+    width: 80px;
+}
+    </style>
+</head>
+<body>
+    <section>
+            <div class="rectangle"></div>
+            <button id="myButton">Click me</button>
+    </section>
+
+    <script>
+        let myButton = document.getElementById("myButton");
+        let reactDiv = document.querySelector(".rectangle");
+
+        const handleMouseEvents = () => {
+            console.log("click");
+            reactDiv.style.backgroundColor = "#f5ee62";
+        }
+
+        const handleMouseOverEvent = () =>{
+            console.log("mouse over");
+            reactDiv.style.backgroundColor = "#78B7D0";
+        }
+
+        myButton.addEventListener("click",()=>{
+            handleMouseEvents();
+        });
+
+        reactDiv.addEventListener("mouseover" , ()=>{
+            handleMouseOverEvent();
+        });
+
+    </script>
+
+</body>
+</html>
